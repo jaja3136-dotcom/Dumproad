@@ -1,1 +1,48 @@
-덤프료드
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>덤프로드</title>
+<style>
+body{margin:0;background:#101827;color:white;font-family:Arial,sans-serif}
+header{background:#f59e0b;color:#111;padding:22px;text-align:center;font-size:28px;font-weight:bold}
+main{padding:20px}
+.card{background:#1e293b;padding:20px;border-radius:15px;margin-bottom:15px}
+input,button{box-sizing:border-box;width:100%;padding:15px;margin:8px 0;border:0;border-radius:9px;font-size:17px}
+button{background:#f59e0b;color:#111;font-weight:bold}
+small{color:#cbd5e1}
+</style>
+</head>
+<body>
+<header>🚛 덤프로드</header>
+<main>
+<div class="card">
+<h2>25톤 덤프트럭 전용</h2>
+<p>안전 운행을 위한 경로 확인</p>
+</div>
+<div class="card">
+<h3>출발지</h3>
+<input id="start" placeholder="출발지 입력">
+<h3>도착지</h3>
+<input id="end" placeholder="도착지 입력">
+<button onclick="route()">경로 검색</button>
+</div>
+<div class="card">
+<h3>⚠️ 대형차 운행 주의</h3>
+<p>교량 하중 · 높이 제한 · 통행 제한 확인</p>
+<small>현재 시험 버전입니다. 실제 경로 안내와 제한구간 자동 회피는 아직 지원하지 않습니다. 반드시 공식 교통표지와 화물차용 내비게이션을 확인하세요.</small>
+</div>
+</main>
+<script>
+function route(){
+const a=document.getElementById('start').value.trim();
+const b=document.getElementById('end').value.trim();
+if(!a||!b){alert('출발지와 도착지를 입력하세요.');return;}
+alert('출발지: '+a+'\n도착지: '+b+'\n\n경로 검색 기능은 개발 중입니다.');
+}
+</script>
+</body>
+</html>
